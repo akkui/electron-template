@@ -9,7 +9,7 @@ Use this repository to get a free template to make your apps using electronjs.
 ### Run to Tests
 Use ``electron .`` inside the app folder.
 <br>
-### Package to Executable File
+### Transform into an Executable File
 Use ``electron-package .`` inside the app folder.<br>
 After the package end, will be created a new folder inside the app folder<br>
 with all files of your app, just run the ``YOUR_APP_NAME.exe`` to start.
