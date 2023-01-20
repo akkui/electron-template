@@ -1,6 +1,3 @@
-# Template for an App made with ElectronJS
-Use this repository to get a free template to make your apps using electronjs.
-
 # Requirements
 - Electron — ``npm install electron -g`` (required)
 - Electron Package Global — ``npm install electron-package -g`` (not required)
