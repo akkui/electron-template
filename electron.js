@@ -1,20 +1,26 @@
+const electron = require("electron");
 const { app, BrowserWindow } = require("electron");
 
-let win = null;
-const render = () => {
-  win = new BrowserWindow({
-    width: 1280,
-    height: 768,
-    resizable: false,
-    autoHideMenuBar: true,
-    title: "Button Status",
-    icon: "./img/icon.ico",
-    webPreferences: {
-      nodeIntegration: true,
-    },
-  });
+app.on('ready', () => {
+  function render() {
+    const {width, height} = electron.screen.getPrimaryDisplay().workAreaSize
+    win = new BrowserWindow({
+      width: width,
+      height: height,
+      resizable: false,
+      autoHideMenuBar: true,
+      fullscreen: true,
+      title: "Button Status",
+      icon: "./img/icon.ico",
+      webPreferences: {
+        nodeIntegration: true,
+      },
+    });
 
-  win.loadFile("./src/index.html");
-};
+    win.loadFile("./src/index.html");
+  }
 
-app.whenReady().then(render);
+  render();
+})
+
+//electron-packager ./ "nome" --icon=./img/icon.ico
