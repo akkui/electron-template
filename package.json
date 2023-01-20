@@ -1,5 +1,5 @@
 {
-  "name": "run",
+  "name": "electron",
   "author": "lovellyrosie",
   "version": "1.0.0",
   "main": "electron.js",
